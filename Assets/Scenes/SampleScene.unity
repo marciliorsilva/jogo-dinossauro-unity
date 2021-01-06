@@ -1086,7 +1086,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -67
   m_TargetDisplay: 0
 --- !u!224 &822898537
 RectTransform:
@@ -1202,6 +1202,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842990506}
   m_CullTransparentMesh: 0
+--- !u!1 &984543315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984543316}
+  m_Layer: 8
+  m_Name: ChaoCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984543316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984543315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.24, y: -4.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1184838118}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986608467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1719,7 @@ GameObject:
   - component: {fileID: 1184838119}
   - component: {fileID: 1184838120}
   - component: {fileID: 1184838121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,6 +1738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1552841104}
+  - {fileID: 984543316}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1745,9 +1776,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -8.44965, y: -3.8727536}
+  m_Offset: {x: -5.7476254, y: -3.8727536}
   serializedVersion: 2
-  m_Radius: 1.133719
+  m_Radius: 1.1528826
 --- !u!114 &1184838121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,9 +1791,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c406fb5cab300c04ab5e6c642b1e88f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 3
-  forcaPulo: 200
-  chaoVerificador: {fileID: 0}
+  MaxVelocidade: 5
+  ChaoCheck: {fileID: 984543316}
+  OQueEChao:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!1 &1229163343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2252,7 @@ GameObject:
   - component: {fileID: 1552841104}
   - component: {fileID: 1552841105}
   - component: {fileID: 1552841106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: personagem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
