@@ -21,7 +21,7 @@ public class EfeitoParallax : MonoBehaviour
 
     public void MoveFundo()
     {
-        transform.position = new Vector3(transform.position.x - velocidade * Time.deltaTime * Input.GetAxis("Horizontal"), 0, 0);
+        transform.position = new Vector3(transform.position.x - velocidade * Time.deltaTime * 1, 0, 0);
         
         if(transform.localPosition.x >= fundo.preferredWidth)
         {
